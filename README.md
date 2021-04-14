@@ -4,7 +4,7 @@ Automatically control multiple digital cameras when digitizing photo albums with
 The script will automatically trigger multiple cameras in a set order with set time delays. To enable you to sit back and turn pages of a book whilst the software does all the hard work for you! The script will print out information as it captures pages or waits for you to turn a a page. I know digiCamControl already has a timelapse feature for multiple camera controls, but I found this to be much more adjustable and was able to easily change th order of multiple cameras. 
 
 # How to use 
- - step 1 download script
+ - step 1 download [the script](https://github.com/Shellywell123/digiCamControl_Book_Scanning_Script/commit/e733972e3b5e0531d915fe7ecc8245e4534ea0c8)
  - step 2 open `digiCamControl` software and connect cameras and create a new session
  - step 3 click `plugins>Tools>script execution`
  - step 4 in the script execution window click `file>open>navigate to downloaded script`
