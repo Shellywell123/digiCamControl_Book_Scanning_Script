@@ -1,0 +1,54 @@
+#######################################
+# How to use Shellywell123's script :)
+#######################################
+#
+# change any timedelays / number of pages to your preferences
+# a hashtag dictates a comment in the script as a guide
+# hit run/stop in the toolbar to srtart/stop the script
+# the script should print in the console below as it takes photos and expects you to turn the pages of the book
+# enjoy!
+#
+#######################################
+
+# uncomment this if you want to set the path manually
+#dcc set session.folder C:\\Users\\Darkroom\\Desktop\\
+
+# set number of double pages in book
+set number_of_double_pages 100
+
+# set time delays in ms
+set wait_between_pages 0
+set wait_between_double_pages 1400
+
+# set camera order by serial numbers
+set right_camera REPLACE_THIS_WITH_CAM1_SERIAL_NO
+set left_camera REPLACE_THIS_WITH_CAM2_SERIAL_NO
+
+#######################################
+# script start
+#######################################
+
+for {set i 0} {$i < $number_of_double_pages} {incr i} {
+	#wait for page turn / gives you times to get to the book after pressing run
+	echo "waiting for you to turn page"
+	after $wait_between_double_pages
+	
+	# right camera
+	dcc set camera $right_camera
+	
+	dcc capture
+	echo "left page captured"
+	
+	# wait between shots
+	after $wait_between_pages
+	
+	# left camera
+	dcc set camera $left_camera
+	dcc capture
+	echo "right page captured"
+	
+}
+
+#######################################
+# script end
+#######################################
